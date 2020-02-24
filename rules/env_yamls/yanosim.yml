@@ -1,0 +1,12 @@
+name: yanosim
+channels:
+ - conda-forge
+ - bioconda
+dependencies:
+ - python=3.6
+ - numpy
+ - scipy
+ - click
+ - pysam>=0.15
+ - pip:
+   - -e /cluster/ggs_lab/mtparker/two_pass_alignment_pipeline/scripts/yanosim

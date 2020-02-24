@@ -1,0 +1,59 @@
+### INPUT PARAMETERS ###
+
+# paths to fastq files, should be key: value pairs as key will be used as sample name 
+
+fastq_fns: 
+  20191112_human_bham1: workman_Bham_Run1_20171009_directRNA/raw_data/20191112_human_bham1.dna.fastq
+  20191112_human_bham2: workman_Bham_Run2_20171011_directRNA/raw_data/20191112_human_bham2.dna.fastq
+  20191112_human_bham3: workman_Bham_Run3_20171011_directRNA/raw_data/20191112_human_bham3.dna.fastq
+  20191112_human_bham5: workman_Bham_Run5_20171011_directRNA/raw_data/20191112_human_bham5.dna.fastq
+
+# directories to put outputs for each sample into
+
+basedirs: 
+  20191112_human_bham1: workman_Bham_Run1_20171009_directRNA
+  20191112_human_bham2: workman_Bham_Run2_20171011_directRNA
+  20191112_human_bham3: workman_Bham_Run3_20171011_directRNA
+  20191112_human_bham5: workman_Bham_Run5_20171011_directRNA
+
+sequencing_type: drs
+
+### REFERENCE PARAMETERS ###
+
+genome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/GRCh38/fasta/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa
+chromsizes_fn: /cluster/ggs_lab/mtparker/annotations/GRCh38/fasta/Homo_sapiens.GRCh38.dna_sm.primary_assembly.chrom.sizes
+transcriptome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/GRCh38/fasta/Homo_sapiens.GRCh38.cdna.all.fa
+annot_gtf: /cluster/ggs_lab/mtparker/annotations/GRCh38/gtf/Homo_sapiens.GRCh38.98.gtf
+is_ensembl: True
+
+### SIMULATEION PARAMETERS ###
+
+yanosim_parameters:
+  threads: 24
+  random_seed: 101
+  run_simulation: True
+
+### MAPPING PARAMETERS ###
+
+minimap2_parameters:
+  threads: 24
+  max_intron_size: 200000
+  junction_bonus: 12
+
+### FILTERING PARAMETERS ###
+
+2passtools_parameters:
+  threads: 12
+  jad_size_threshold: 4
+  primary_junction_search_distance: 20
+  canonical_motifs: 'GTAG|GCAG|ATAG'
+  sequence_model_window_size: 128
+  sequence_model_kfold: 6
+  low_confidence_threshold: 0.1
+  high_confidence_threshold: 0.6
+
+
+### ASSEMBLY PARAMETERS ###
+
+stringtie_parameters:
+  threads: 24

@@ -1,0 +1,23 @@
+configfile: 'config.yml'
+include: '../rules/input.snakefile'
+include: '../rules/minimap2.snakefile'
+include: '../rules/2passtools.snakefile'
+include: '../rules/simulation.snakefile'
+include: '../rules/assembly.snakefile'
+include: '../rules/benchmarking.snakefile'
+include: '../rules/flair.snakefile'
+
+
+rule all:
+    input:
+        bam=bam_file_input,
+        gtf=stringtie_input,
+        bed=junction_input,
+        tsv=benchmark_input
+
+
+rule clean:
+    shell:
+        '''
+        rm snakejob.*
+        '''

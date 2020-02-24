@@ -1,0 +1,59 @@
+### INPUT PARAMETERS ###
+
+# paths to fastq files, should be key: value pairs as key will be used as sample name 
+
+fastq_fns: 
+  201901_col0_2916: 20180201_1617_20180201_FAH45730_WT_Col0_2916_regular_seq/raw_data/201901_col0_2916.dna.fastq
+  201901_col0_2917: 20180413_1558_20180413_FAH77434_mRNA_WT_Col0_2917/raw_data/201901_col0_2917.dna.fastq
+  201901_col0_2918: 20180416_1534_20180415_FAH83697_mRNA_WT_Col0_2918/raw_data/201901_col0_2918.dna.fastq
+  201901_col0_2919: 20180418_1428_20180418_FAH83552_mRNA_WT_Col0_2919/raw_data/201901_col0_2919.dna.fastq
+
+# directories to put outputs for each sample into
+
+basedirs:
+  201901_col0_2916: 20180201_1617_20180201_FAH45730_WT_Col0_2916_regular_seq
+  201901_col0_2917: 20180413_1558_20180413_FAH77434_mRNA_WT_Col0_2917
+  201901_col0_2918: 20180416_1534_20180415_FAH83697_mRNA_WT_Col0_2918
+  201901_col0_2919: 20180418_1428_20180418_FAH83552_mRNA_WT_Col0_2919
+
+sequencing_type: drs
+
+### REFERENCE PARAMETERS ###
+
+genome_fasta_fn: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/TAIR10/ensembl/release_35/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa
+chromsizes_fn: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/TAIR10/ensembl/release_35/Arabidopsis_thaliana.TAIR10.chrom.sizes
+transcriptome_fasta_fn: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/atRTD/2016_update/AtRTD2_19April2016.nanosim_safe.fa
+annot_gtf: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/atRTD/2016_update/AtRTD2_19April2016.nanosim_safe.gtf
+is_ensembl: False
+
+### SIMULATEION PARAMETERS ###
+
+yanosim_parameters:
+  threads: 24
+  random_seed: 101
+  run_simulation: True
+
+### MAPPING PARAMETERS ###
+
+minimap2_parameters:
+  threads: 24
+  max_intron_size: 10000
+  junction_bonus: 12
+
+### FILTERING PARAMETERS ###
+
+2passtools_parameters:
+  threads: 12
+  jad_size_threshold: 4
+  primary_junction_search_distance: 20
+  canonical_motifs: 'GTAG|GCAG|ATAG'
+  sequence_model_window_size: 128
+  sequence_model_kfold: 6
+  low_confidence_threshold: 0.1
+  high_confidence_threshold: 0.6
+
+
+### ASSEMBLY PARAMETERS ###
+
+stringtie_parameters:
+  threads: 24

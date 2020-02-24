@@ -1,0 +1,55 @@
+### INPUT PARAMETERS ###
+
+# paths to fastq files, should be key: value pairs as key will be used as sample name 
+
+fastq_fns: 
+  col0_cntrl: zhu_col0_cntrl_isoseq/raw_data/SRR5298104_subreads.fastq
+  col0_aba: zhu_col0_aba_isoseq/raw_data/SRR5298102_subreads.fastq
+
+# directories to put outputs for each sample into
+
+basedirs:
+  col0_cntrl: zhu_col0_cntrl_isoseq
+  col0_aba: zhu_col0_aba_isoseq
+
+sequencing_type: isoseq
+
+### REFERENCE PARAMETERS ###
+
+genome_fasta_fn: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/TAIR10/ensembl/release_35/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa
+chromsizes_fn: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/TAIR10/ensembl/release_35/Arabidopsis_thaliana.TAIR10.chrom.sizes
+transcriptome_fasta_fn: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/atRTD/2016_update/AtRTD2_19April2016.nanosim_safe.fa
+annot_gtf: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/atRTD/2016_update/AtRTD2_19April2016.nanosim_safe.gtf
+is_ensembl: False
+
+### SIMULATEION PARAMETERS ###
+
+yanosim_parameters:
+  threads: 24
+  random_seed: 101
+  run_simulation: False
+
+### MAPPING PARAMETERS ###
+
+minimap2_parameters:
+  threads: 24
+  max_intron_size: 10000
+  junction_bonus: 12
+
+### FILTERING PARAMETERS ###
+
+2passtools_parameters:
+  threads: 12
+  jad_size_threshold: 4
+  primary_junction_search_distance: 20
+  canonical_motifs: 'GTAG|GCAG|ATAG'
+  sequence_model_window_size: 128
+  sequence_model_kfold: 6
+  low_confidence_threshold: 0.1
+  high_confidence_threshold: 0.6
+
+
+### ASSEMBLY PARAMETERS ###
+
+stringtie_parameters:
+  threads: 24
