@@ -13,10 +13,12 @@ pipeline/*/*/metrics
 pipeline/*/*/simulated_data
 
 pipeline/*/*/raw_data/*
-scripts/*/
 notebooks/figures
 notebooks/figures_final
 notebooks/flm_bed_files
+
+scripts/yanosim
+scripts/2passtools
 
 ._.DS_Store
 .DS_Store

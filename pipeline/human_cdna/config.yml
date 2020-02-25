@@ -26,7 +26,7 @@ transcriptome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/GRCh38/fasta/Homo_
 annot_gtf: /cluster/ggs_lab/mtparker/annotations/GRCh38/gtf/Homo_sapiens.GRCh38.98.gtf
 is_ensembl: True
 
-### SIMULATEION PARAMETERS ###
+### SIMULATION PARAMETERS ###
 
 yanosim_parameters:
   threads: 24
