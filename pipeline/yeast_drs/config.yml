@@ -1,0 +1,62 @@
+### INPUT PARAMETERS ###
+
+# paths to fastq files, should be key: value pairs as key will be used as sample name 
+
+fastq_fns:
+  garalde_ONT_yeast_rep0: garalde_ONT_yeast_rep0/raw_data/SRR6059707_1.fastq
+  garalde_ONT_yeast_rep1: garalde_ONT_yeast_rep1/raw_data/SRR6059706_1.fastq
+  garalde_ONT_yeast_rep2: garalde_ONT_yeast_rep2/raw_data/SRR6059712_1.fastq
+  garalde_ONT_yeast_rep3: garalde_ONT_yeast_rep3/raw_data/SRR6059711_1.fastq
+  garalde_ONT_yeast_rep4: garalde_ONT_yeast_rep4/raw_data/SRR6059710_1.fastq
+
+# directories to put outputs for each sample into
+
+basedirs:
+  garalde_ONT_yeast_rep0: garalde_ONT_yeast_rep0
+  garalde_ONT_yeast_rep1: garalde_ONT_yeast_rep1
+  garalde_ONT_yeast_rep2: garalde_ONT_yeast_rep2
+  garalde_ONT_yeast_rep3: garalde_ONT_yeast_rep3
+  garalde_ONT_yeast_rep4: garalde_ONT_yeast_rep4
+
+sequencing_type: drs
+
+### REFERENCE PARAMETERS ###
+
+genome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/saccer_R64-1-1/fasta/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa
+chromsizes_fn: /cluster/ggs_lab/mtparker/annotations/saccer_R64-1-1/fasta/Saccharomyces_cerevisiae.R64-1-1.chrom.sizes
+transcriptome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/saccer_R64-1-1/fasta/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa
+annot_gtf: /cluster/ggs_lab/mtparker/annotations/saccer_R64-1-1/gtf/Saccharomyces_cerevisiae.R64-1-1.99.gtf
+is_ensembl: False
+
+### SIMULATION PARAMETERS ###
+
+yanosim_parameters:
+  threads: 24
+  random_seed: 101
+  run_simulation: False
+  simulate_three_prime_bias: False
+
+### MAPPING PARAMETERS ###
+
+minimap2_parameters:
+  threads: 24
+  max_intron_size: 2000
+  junction_bonus: 12
+
+### FILTERING PARAMETERS ###
+
+2passtools_parameters:
+  threads: 12
+  jad_size_threshold: 4
+  primary_junction_search_distance: 20
+  canonical_motifs: 'GTAG'
+  sequence_model_window_size: 128
+  sequence_model_kfold: 6
+  low_confidence_threshold: 0.1
+  high_confidence_threshold: 0.6
+
+
+### ASSEMBLY PARAMETERS ###
+
+stringtie_parameters:
+  threads: 4

@@ -32,6 +32,7 @@ yanosim_parameters:
   threads: 24
   random_seed: 101
   run_simulation: True
+  simulate_three_prime_bias: False
 
 ### MAPPING PARAMETERS ###
 
@@ -56,4 +57,4 @@ minimap2_parameters:
 ### ASSEMBLY PARAMETERS ###
 
 stringtie_parameters:
-  threads: 24
+  threads: 4

@@ -3,7 +3,7 @@ def get_sequence_input(wc):
     if wc.seqtype == 'real':
         return fastq_fns[wc.sample_name]
     else:
-        return '{basedir}/simulated_data/{sample_name}.{seqtype}.fasta'
+        return f'{wc.basedir}/simulated_data/{wc.sample_name}.{wc.seqtype}.fasta'
         
 
 def get_junc_bed_fn(wc):
@@ -21,9 +21,9 @@ def get_junc_bed_fn(wc):
     elif wc.bamtype == 'refguided':
         return 'juncs/annot_juncs.bed'
     elif wc.bamtype == 'dt2filt_merged':
-        return 'juncs/merged.{seqtype}.dt2filt.bed'
+        return f'juncs/merged.{wc.seqtype}.dt2filt.bed'
     else:
-        return '{basedir}/juncs/{sample_name}.{seqtype}.{bamtype}.bed'
+        return f'{wc.basedir}/juncs/{wc.sample_name}.{wc.seqtype}.{wc.bamtype}.bed'
 
 
 def get_reference_fn(wc):
@@ -100,7 +100,7 @@ rule map_with_minimap:
         'env_yamls/minimap2.yml'
     shell:
         '''
-        minimap2 -t{threads} \
+        ../../scripts/minimap2/minimap2 -t{threads} \
           {params.mm2_params} \
           {params.junc_params} \
           {input.reference} \

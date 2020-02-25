@@ -6,7 +6,7 @@ fastq_fns:
   col0_cntrl: zhu_col0_cntrl_isoseq/raw_data/SRR5298104_subreads.fastq
   col0_aba: zhu_col0_aba_isoseq/raw_data/SRR5298102_subreads.fastq
 
-# directories to put outputs for each sample into
+# directories to put outputs for each sample into - doesn't have to be the same directory as fastq_fn paths
 
 basedirs:
   col0_cntrl: zhu_col0_cntrl_isoseq
@@ -22,12 +22,13 @@ transcriptome_fasta_fn: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/atRTD/
 annot_gtf: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/atRTD/2016_update/AtRTD2_19April2016.nanosim_safe.gtf
 is_ensembl: False
 
-### SIMULATEION PARAMETERS ###
+### SIMULATION PARAMETERS ###
 
 yanosim_parameters:
   threads: 24
   random_seed: 101
   run_simulation: False
+  simulate_three_prime_bias: False
 
 ### MAPPING PARAMETERS ###
 
@@ -52,4 +53,4 @@ minimap2_parameters:
 ### ASSEMBLY PARAMETERS ###
 
 stringtie_parameters:
-  threads: 24
+  threads: 4

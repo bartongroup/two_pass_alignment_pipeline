@@ -3,20 +3,24 @@
 # paths to fastq files, should be key: value pairs as key will be used as sample name 
 
 fastq_fns: 
-  20191112_human_bham1: workman_Bham_Run1_20171120_cDNA/raw_data/Bham_Run1_20171120_1D2_1Donly.all.dedeup.fastq
-  20191112_human_bham2: workman_Bham_Run2_20171120_cDNA/raw_data/Bham_Run2_20171120_1D2_1Donly.all.dedeup.fastq
-  20191112_human_hopkins1: workman_Hopkins_Run1_20171011_cDNA/raw_data/Hopkins_Run1_20171011_1D2_1Donly.all.dedeup.fastq
-  20191112_human_hopkins2: workman_Hopkins_Run2_20171011_cDNA/raw_data/Hopkins_Run2_20171011_1D2_1Donly.all.dedeup.fastq
+  isoseq_brain_fulllength: isoseq_human_brain_fulllength/raw_data/brain.flnc.fasta
+  isoseq_brain_notfulllength: isoseq_human_brain_notfulllength/raw_data/brain.nfl.fasta
+  isoseq_liver_fulllength: isoseq_human_liver_fulllength/raw_data/liver.flnc.fasta
+  isoseq_liver_notfulllength: isoseq_human_liver_notfulllength/raw_data/liver.nfl.fasta
+  isoseq_heart_fulllength: isoseq_human_heart_fulllength/raw_data/heart.flnc.fasta
+  isoseq_heart_notfulllength: isoseq_human_heart_notfulllength/raw_data/heart.nfl.fasta
 
-# directories to put outputs for each sample into
+# directories to put outputs for each sample into - doesn't have to be the same directory as fastq_fn paths
 
 basedirs: 
-  20191112_human_bham1: workman_Bham_Run1_20171120_cDNA
-  20191112_human_bham2: workman_Bham_Run2_20171120_cDNA
-  20191112_human_hopkins1: workman_Hopkins_Run1_20171011_cDNA
-  20191112_human_hopkins2: workman_Hopkins_Run2_20171011_cDNA
+  isoseq_brain_fulllength: isoseq_human_brain_fulllength
+  isoseq_brain_notfulllength: isoseq_human_brain_notfulllength
+  isoseq_liver_fulllength: isoseq_human_liver_fulllength
+  isoseq_liver_notfulllength: isoseq_human_liver_notfulllength
+  isoseq_heart_fulllength: isoseq_human_heart_fulllength
+  isoseq_heart_notfulllength: isoseq_human_heart_notfulllength
 
-sequencing_type: cdna
+sequencing_type: isoseq
 
 ### REFERENCE PARAMETERS ###
 

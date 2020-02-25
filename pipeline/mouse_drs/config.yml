@@ -1,0 +1,58 @@
+### INPUT PARAMETERS ###
+
+# paths to fastq files, should be key: value pairs as key will be used as sample name 
+
+fastq_fns: 
+  mouse_rna_brain_1: sessegolo_mouse_rna_brain_1/raw_data/ERR2680375.fastq
+  mouse_rna_brain_2: sessegolo_mouse_rna_brain_2/raw_data/ERR3363657_1.fastq
+  mouse_rna_brain_3: sessegolo_mouse_rna_brain_3/raw_data/ERR3363659_1.fastq
+
+# directories to put outputs for each sample into
+
+basedirs: 
+  mouse_rna_brain_1: sessegolo_mouse_rna_brain_1
+  mouse_rna_brain_2: sessegolo_mouse_rna_brain_2
+  mouse_rna_brain_3: sessegolo_mouse_rna_brain_3
+
+sequencing_type: drs
+
+### REFERENCE PARAMETERS ###
+
+genome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/mm10/Mus_musculus.GRCm38.dna.primary_assembly.fa
+chromsizes_fn: /cluster/ggs_lab/mtparker/annotations/mm10/Mus_musculus.GRCm38.chrom.sizes
+transcriptome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/mm10/Mus_musculus.GRCm38.cdna.all.fa
+annot_gtf: /cluster/ggs_lab/mtparker/annotations/mm10/Mus_musculus.GRCm38.99.gtf
+is_ensembl: True
+
+### SIMULATEION PARAMETERS ###
+
+yanosim_parameters:
+  threads: 24
+  random_seed: 101
+  run_simulation: False
+  simulate_three_prime_bias: False
+
+### MAPPING PARAMETERS ###
+
+minimap2_parameters:
+  threads: 24
+  max_intron_size: 200000
+  junction_bonus: 12
+
+### FILTERING PARAMETERS ###
+
+2passtools_parameters:
+  threads: 12
+  jad_size_threshold: 4
+  primary_junction_search_distance: 20
+  canonical_motifs: 'GTAG|GCAG|ATAG'
+  sequence_model_window_size: 128
+  sequence_model_kfold: 6
+  low_confidence_threshold: 0.1
+  high_confidence_threshold: 0.6
+
+
+### ASSEMBLY PARAMETERS ###
+
+stringtie_parameters:
+  threads: 4

@@ -13,9 +13,11 @@ def _expand_bamtype_seqtype(file_pattern, bam_types, incl_sim=True, incl_real=Tr
     seq_types = []
     if incl_sim:
         run_sim = config['yanosim_parameters'].get('run_simulation', True)
-        seq_types += ['sim', 'sim_nofrag'] if run_sim else []
+        sim_frag = config['yanosim_parameters'].get('simulate_three_prime_bias', False)
+        if run_sim:
+            seq_types.append('sim' if sim_frag else 'sim_nofrag')
     if incl_real:
-        seq_types += ['real']
+        seq_types.append('real')
     expanded_file_pattern = expand(
         file_pattern,
         bam_type=bam_types,
