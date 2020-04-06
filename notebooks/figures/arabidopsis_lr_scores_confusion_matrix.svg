@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="360pt" version="1.1" viewBox="0 0 360 360" width="360pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 360 360 
+L 360 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 48.6 315 
+L 320.4 315 
+L 320.4 43.2 
+L 48.6 43.2 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path d="M 0 0 
+L 0 6 
+" id="m0efc779954" style="stroke:#262626;stroke-width:1.25;"/>
+      </defs>
+      <g>
+       <use style="fill:#262626;stroke:#262626;stroke-width:1.25;" x="116.55" xlink:href="#m0efc779954" y="315"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill:#262626;font-family:DejaVu Sans;font-size:15.4px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 116.55, 336.201594)" x="116.55" y="336.201594">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use style="fill:#262626;stroke:#262626;stroke-width:1.25;" x="252.45" xlink:href="#m0efc779954" y="315"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill:#262626;font-family:DejaVu Sans;font-size:15.4px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 252.45, 336.201594)" x="252.45" y="336.201594">1</text>
+     </g>
+    </g>
+    <g id="text_3">
+     <text style="fill:#262626;font-family:DejaVu Sans;font-size:16.8px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 184.5, 356.169688)" x="184.5" y="356.169688">Prediction</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <defs>
+       <path d="M 0 0 
+L -6 0 
+" id="mf024cd19ab" style="stroke:#262626;stroke-width:1.25;"/>
+      </defs>
+      <g>
+       <use style="fill:#262626;stroke:#262626;stroke-width:1.25;" x="48.6" xlink:href="#mf024cd19ab" y="111.15"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill:#262626;font-family:DejaVu Sans;font-size:15.4px;font-style:normal;font-weight:normal;" transform="translate(35.897281 115.097453)rotate(-90)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_4">
+      <g>
+       <use style="fill:#262626;stroke:#262626;stroke-width:1.25;" x="48.6" xlink:href="#mf024cd19ab" y="247.05"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill:#262626;font-family:DejaVu Sans;font-size:15.4px;font-style:normal;font-weight:normal;" transform="translate(35.897281 250.997453)rotate(-90)">1</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="fill:#262626;font-family:DejaVu Sans;font-size:16.8px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-90, 16.701813, 179.1)" x="16.701813" y="179.1">Annotation</text>
+    </g>
+   </g>
+   <g id="QuadMesh_1">
+    <path clip-path="url(#p8742f957ee)" d="M 48.6 43.2 
+L 184.5 43.2 
+L 184.5 179.1 
+L 48.6 179.1 
+L 48.6 43.2 
+" style="fill:#3686c0;"/>
+    <path clip-path="url(#p8742f957ee)" d="M 184.5 43.2 
+L 320.4 43.2 
+L 320.4 179.1 
+L 184.5 179.1 
+L 184.5 43.2 
+" style="fill:#dce9f6;"/>
+    <path clip-path="url(#p8742f957ee)" d="M 48.6 179.1 
+L 184.5 179.1 
+L 184.5 315 
+L 48.6 315 
+L 48.6 179.1 
+" style="fill:#f7fbff;"/>
+    <path clip-path="url(#p8742f957ee)" d="M 184.5 179.1 
+L 320.4 179.1 
+L 320.4 315 
+L 184.5 315 
+L 184.5 179.1 
+" style="fill:#08306b;"/>
+   </g>
+   <g id="text_7">
+    <text style="fill:#ffffff;font-family:DejaVu Sans;font-size:16.8px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 116.55, 115.78575)" x="116.55" y="115.78575">282294</text>
+   </g>
+   <g id="text_8">
+    <text style="fill:#262626;font-family:DejaVu Sans;font-size:16.8px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 252.45, 115.78575)" x="252.45" y="115.78575">71837</text>
+   </g>
+   <g id="text_9">
+    <text style="fill:#262626;font-family:DejaVu Sans;font-size:16.8px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 116.55, 251.68575)" x="116.55" y="251.68575">16157</text>
+   </g>
+   <g id="text_10">
+    <text style="fill:#ffffff;font-family:DejaVu Sans;font-size:16.8px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 252.45, 251.68575)" x="252.45" y="251.68575">413592</text>
+   </g>
+   <g id="text_11">
+    <!-- $min(P_{donor}, P_{acceptor}) \geq 0.5$ -->
+    <g style="fill:#262626;" transform="translate(80.676 37.2)">
+     <text>
+      <tspan style="font-family:DejaVu Sans;font-size:16.8px;font-style:oblique;font-weight:oblique;" x="0 16.362183 21.028885 38.227631 91.564328" y="-0.234375">minPP</tspan>
+      <tspan style="font-family:DejaVu Sans;font-size:16.8px;font-style:book;font-weight:book;" x="31.674561 82.952658 153.62179 163.447296 180.793677 191.480353 196.819586" y="-0.234375">(,)≥0.5</tspan>
+      <tspan style="font-family:DejaVu Sans;font-size:11.76px;font-style:oblique;font-weight:oblique;" x="48.356598 55.820053 63.01367 70.465643 77.659261 101.693295 108.898395 115.362895 121.827396 129.061206 136.524661 141.134775 148.328392" y="2.5218749999999996">donoracceptor</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8742f957ee">
+   <rect height="271.8" width="271.8" x="48.6" y="43.2"/>
+  </clipPath>
+ </defs>
+</svg>

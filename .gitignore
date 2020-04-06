@@ -13,8 +13,6 @@ pipeline/*/*/metrics
 pipeline/*/*/simulated_data
 
 pipeline/*/*/raw_data/*
-notebooks/figures
-notebooks/figures_final
 notebooks/flm_bed_files
 
 scripts/yanosim
