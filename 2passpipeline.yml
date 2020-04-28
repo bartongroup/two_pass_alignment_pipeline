@@ -1,0 +1,7 @@
+name: 2passpipeline
+channels:
+ - conda-forge
+ - bioconda
+dependencies:
+ - snakemake-minimal=5.10.0
+ - samtools=1.10

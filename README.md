@@ -19,12 +19,12 @@ Conda environments for each rule will be created automatically by snakemake. The
 Sometime like:
 
 ```
-# make snakemake environment
-conda create -n snakemake -c bioconda snakemake-minimal
-conda activate snakemake
-
 git clone https://github.com/bartongroup/two_pass_alignment_pipeline.git
 cd two_pass_alignment_pipeline
+
+# make snakemake environment
+conda env create -f 2passpipeline.yml
+conda activate 2passpipeline
 
 # download data and annotations for e.g. Arabidopsis DRS benchmarking
 cd annotations/arabidopsis
