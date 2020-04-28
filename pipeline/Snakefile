@@ -16,8 +16,8 @@ def check_simulation_files_exist():
     sim_files = expand(
         [f'{{basedir}}/simulated_data/{{sample_name}}.{sim_type}.fasta',
          '{basedir}/simulated_data/{sample_name}_quant.tsv',
-         '{basedir}/simulated_data/{sample_name}_simulated_reference.gtf']
-        zip, basedir=target_dirs, sample_name=target_name
+         '{basedir}/simulated_data/{sample_name}_simulated_reference.gtf'],
+        zip, basedir=target_dirs, sample_name=target_names
     )
     for fn in sim_files:
         if not os.path.exists(fn):
@@ -27,7 +27,7 @@ def check_simulation_files_exist():
 
 
 # if simulated files have been downloaded we don't need these rules:
-if config['yanosim_parameters']['run_simulation']:
+if config['yanosim_parameters'].get('run_simulation', False):
     if not check_simulation_files_exist():
         include: '../rules/simulation.snakefile'
 
