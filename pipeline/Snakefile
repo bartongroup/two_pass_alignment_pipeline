@@ -1,12 +1,35 @@
+import os
+
 configfile: 'config.yml'
 include: '../rules/input.snakefile'
 include: '../rules/minimap2.snakefile'
 include: '../rules/2passtools.snakefile'
-include: '../rules/simulation.snakefile'
 include: '../rules/assembly.snakefile'
 include: '../rules/benchmarking.snakefile'
 include: '../rules/flair.snakefile'
 
+
+def check_simulation_files_exist():
+    target_names, target_dirs = list(zip(*config['basedirs'].items()))
+    sim_frag = config['yanosim_parameters'].get('simulate_three_prime_bias', False)
+    sim_type = 'sim' if sim_frag else 'sim_nofrag'
+    sim_files = expand(
+        [f'{{basedir}}/simulated_data/{{sample_name}}.{sim_type}.fasta',
+         '{basedir}/simulated_data/{sample_name}_quant.tsv',
+         '{basedir}/simulated_data/{sample_name}_simulated_reference.gtf']
+        zip, basedir=target_dirs, sample_name=target_name
+    )
+    for fn in sim_files:
+        if not os.path.exists(fn):
+            return False
+    else:
+        return True
+
+
+# if simulated files have been downloaded we don't need these rules:
+if config['yanosim_parameters']['run_simulation']:
+    if not check_simulation_files_exist():
+        include: '../rules/simulation.snakefile'
 
 rule all:
     input:
