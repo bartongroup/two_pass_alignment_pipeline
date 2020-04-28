@@ -9,4 +9,4 @@ dependencies:
  - click
  - pysam>=0.15
  - pip:
-   - -e /cluster/ggs_lab/mtparker/two_pass_alignment_pipeline/scripts/yanosim
+   - git+git://github.com/bartongroup/yanosim.git

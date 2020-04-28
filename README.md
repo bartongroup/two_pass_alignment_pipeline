@@ -23,8 +23,15 @@ Sometime like:
 conda create -n snakemake -c bioconda snakemake-minimal
 conda activate snakemake
 
-git clone <url>
-cd two_pass_alignment_pipeline/pipeline
+git clone https://github.com/bartongroup/two_pass_alignment_pipeline.git
+cd two_pass_alignment_pipeline
+
+# download data and annotations for e.g. Arabidopsis DRS benchmarking
+cd annotations/arabidopsis
+./fetch_annotations.sh
+cd ../../pipeline/arabidopsis_drs
+./fetch_data.sh
+cd ..
 
 # set up the conda environments required to run the pipeline
 snakemake -d arabidopsis_drs \
