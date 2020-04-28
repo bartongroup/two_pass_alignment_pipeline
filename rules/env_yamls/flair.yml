@@ -4,6 +4,6 @@ channels:
  - bioconda
 dependencies:
  - flair=1.4
- - cython
+ - cython=0.29.15
  - pip:
-   - kerneltree
+   - kerneltree==0.0.5

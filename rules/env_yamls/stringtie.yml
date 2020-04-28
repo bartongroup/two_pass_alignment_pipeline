@@ -3,5 +3,5 @@ channels:
  - conda-forge
  - bioconda
 dependencies:
- - stringtie >= 2.0
- - gffcompare
+ - stringtie=2.1.1
+ - gffcompare=0.11.2

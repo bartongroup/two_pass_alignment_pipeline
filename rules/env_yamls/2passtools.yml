@@ -4,11 +4,11 @@ channels:
  - bioconda
 dependencies:
  - python=3.6
- - numpy
- - click
- - click-log
- - pysam>=0.15
- - ncls
+ - numpy=1.18.1
+ - click=7.1.2
+ - click-log=0.3.2
+ - pysam=0.15.4
+ - ncls=0.0.53
  - scikit-learn>=0.22
  - pip:
    - git+git://github.com/bartongroup/2passtools.git
