@@ -5,7 +5,7 @@ curl "ftp://ftp.ensemblgenomes.org/pub/plants/release-35/fasta/arabidopsis_thali
 zcat > "Arabidopsis_thaliana.TAIR10.dna.toplevel.fa"
 
 samtools faidx "Arabidopsis_thaliana.TAIR10.dna.toplevel.fa"
-cut -f-2 "Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.fai" > "Arabidopsis_thaliana.TAIR10.dna.toplevel.chrom.sizes"
+cut -f-2 "Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.fai" > "Arabidopsis_thaliana.TAIR10..chrom.sizes"
 
 echo "Fetching AtRTD2 annotations"
 curl "https://ics.hutton.ac.uk/atRTD/RTD2/AtRTD2_19April2016.fa" |
