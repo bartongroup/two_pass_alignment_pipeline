@@ -33,7 +33,7 @@ is_ensembl: False
 yanosim_parameters:
   threads: 24
   random_seed: 101
-  run_simulation: True
+  run_simulation: False
   simulate_three_prime_bias: False
 
 ### MAPPING PARAMETERS ###
