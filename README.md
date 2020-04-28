@@ -78,7 +78,7 @@ For yanosim:
 * click
 
 For pipeline:
-* minimap2 >= 2.17-r962-dirty or patched version distributed with this pipeline (in scripts/minimap2)
+* minimap2 >= 2.17
 * samtools
 * stringtie >= 2.0
 * bedtools
