@@ -24,10 +24,10 @@ sequencing_type: isoseq
 
 ### REFERENCE PARAMETERS ###
 
-genome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/GRCh38/fasta/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa
-chromsizes_fn: /cluster/ggs_lab/mtparker/annotations/GRCh38/fasta/Homo_sapiens.GRCh38.dna_sm.primary_assembly.chrom.sizes
-transcriptome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/GRCh38/fasta/Homo_sapiens.GRCh38.cdna.all.fa
-annot_gtf: /cluster/ggs_lab/mtparker/annotations/GRCh38/gtf/Homo_sapiens.GRCh38.98.gtf
+genome_fasta_fn: ../../annotations/human/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa
+chromsizes_fn: ../../annotations/human/Homo_sapiens.GRCh38.dna_sm.primary_assembly.chrom.sizes
+transcriptome_fasta_fn: ../../annotations/human/fasta/Homo_sapiens.GRCh38.cdna.all.fa
+annot_gtf: ../../annotations/human/Homo_sapiens.GRCh38.98.gtf
 is_ensembl: True
 
 ### SIMULATEION PARAMETERS ###

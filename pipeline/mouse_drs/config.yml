@@ -18,10 +18,10 @@ sequencing_type: drs
 
 ### REFERENCE PARAMETERS ###
 
-genome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/mm10/Mus_musculus.GRCm38.dna.primary_assembly.fa
-chromsizes_fn: /cluster/ggs_lab/mtparker/annotations/mm10/Mus_musculus.GRCm38.chrom.sizes
-transcriptome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/mm10/Mus_musculus.GRCm38.cdna.all.fa
-annot_gtf: /cluster/ggs_lab/mtparker/annotations/mm10/Mus_musculus.GRCm38.99.gtf
+genome_fasta_fn: ../../annotations/mouse/Mus_musculus.GRCm38.dna.primary_assembly.fa
+chromsizes_fn: ../../annotations/mouse/mm10/Mus_musculus.GRCm38.chrom.sizes
+transcriptome_fasta_fn: ../../annotations/mouse/Mus_musculus.GRCm38.cdna.all.fa
+annot_gtf: ../../annotations/mouse/Mus_musculus.GRCm38.99.gtf
 is_ensembl: True
 
 ### SIMULATEION PARAMETERS ###

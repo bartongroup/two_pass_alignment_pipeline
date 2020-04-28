@@ -22,10 +22,10 @@ sequencing_type: drs
 
 ### REFERENCE PARAMETERS ###
 
-genome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/saccer_R64-1-1/fasta/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa
-chromsizes_fn: /cluster/ggs_lab/mtparker/annotations/saccer_R64-1-1/fasta/Saccharomyces_cerevisiae.R64-1-1.chrom.sizes
-transcriptome_fasta_fn: /cluster/ggs_lab/mtparker/annotations/saccer_R64-1-1/fasta/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa
-annot_gtf: /cluster/ggs_lab/mtparker/annotations/saccer_R64-1-1/gtf/Saccharomyces_cerevisiae.R64-1-1.99.gtf
+genome_fasta_fn: ../../annotations/yeast/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa
+chromsizes_fn: ../../annotations/yeast/Saccharomyces_cerevisiae.R64-1-1.chrom.sizes
+transcriptome_fasta_fn: ../../annotations/yeast/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa
+annot_gtf: ../../annotations/yeast/Saccharomyces_cerevisiae.R64-1-1.99.gtf
 is_ensembl: False
 
 ### SIMULATION PARAMETERS ###

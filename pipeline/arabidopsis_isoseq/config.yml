@@ -16,10 +16,10 @@ sequencing_type: isoseq
 
 ### REFERENCE PARAMETERS ###
 
-genome_fasta_fn: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/TAIR10/ensembl/release_35/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa
-chromsizes_fn: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/TAIR10/ensembl/release_35/Arabidopsis_thaliana.TAIR10.chrom.sizes
-transcriptome_fasta_fn: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/atRTD/2016_update/AtRTD2_19April2016.nanosim_safe.fa
-annot_gtf: /cluster/ggs_lab/mtparker/Arabidopsis_annotations/atRTD/2016_update/AtRTD2_19April2016.nanosim_safe.gtf
+genome_fasta_fn: ../../annotations/arabidopsis/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa
+chromsizes_fn: ../../annotations/arabidopsis/Arabidopsis_thaliana.TAIR10.chrom.sizes
+transcriptome_fasta_fn: ../../annotations/arabidopsis/AtRTD2_19April2016.fa
+annot_gtf: ../../annotations/arabidopsis/AtRTD2_19April2016.gtf
 is_ensembl: False
 
 ### SIMULATION PARAMETERS ###
