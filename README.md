@@ -40,10 +40,17 @@ snakemake -d arabidopsis_drs \
   --conda-prefix <shared conda env location>
 
 # run the pipeline on Arabidopsis DRS data, using SGE cluster
+# note that the cluster settings may need to be altered for your setup
 snakemake -d arabidopsis_drs \
   --use-conda \
   --conda-prefix <shared conda env location> \
   --cluster "qsub -V -cwd -pe smp {threads}" \
+  -j 999
+
+# To run the pipeline without a cluster i.e. in serial:
+snakemake -d arabidopsis_drs \
+  --use-conda \
+  --conda-prefix <shared conda env location> \
   -j 999
 ```
 
