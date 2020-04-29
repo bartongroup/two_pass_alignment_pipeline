@@ -14,13 +14,21 @@ Workflow with read simulation:
 
 ## Install and run:
 
-Conda environments for each rule will be created automatically by snakemake. The environment yamls are in `rules/env_yamls`. If you want to use the same conda environments for all pipeline runs, rather than building them for each run, you can use the `--conda-prefix` parameter of snakemake to set a shared location for environments to be stored in.
+To run the pipeline you first need conda. Conda environments for each rule will be created automatically by snakemake. The environment yamls are in `rules/env_yamls`. If you want to use the same conda environments for all pipeline runs, rather than building them for each run, you can use the `--conda-prefix` parameter of snakemake to set a shared location for environments to be stored in.
 
-Sometime like:
+To run the benchmarking pipeline for the Arabidopsis DRS data will require c.a. 75GB of disk space.
+
+Something like:
 
 ```
-git clone https://github.com/bartongroup/two_pass_alignment_pipeline.git
+# need to clone recursively to get submodules
+git clone --recursive https://github.com/bartongroup/two_pass_alignment_pipeline.git
 cd two_pass_alignment_pipeline
+
+# a specific minimap2 bugfix is required which is not yet on bioconda
+# this is contained as a submodule, which needs building
+cd scripts/minimap2 && make
+cd ../..
 
 # make snakemake environment
 conda env create -f 2passpipeline.yml

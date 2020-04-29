@@ -100,7 +100,7 @@ rule map_with_minimap:
         'env_yamls/minimap2.yml'
     shell:
         '''
-        minimap2 -t{threads} \
+        ../../scripts/minimap2/minimap2 -t{threads} \
           {params.mm2_params} \
           {params.junc_params} \
           {input.reference} \
