@@ -1,0 +1,3 @@
+[submodule "scripts/minimap2"]
+	path = scripts/minimap2
+	url = https://github.com/lh3/minimap2.git
