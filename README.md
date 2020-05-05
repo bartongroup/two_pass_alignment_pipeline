@@ -1,5 +1,7 @@
 # Two pass benchmarking pipeline:
 
+[![two_pass_pipeline_doi](https://zenodo.org/badge/DOI/10.5281/zenodo.3778868.svg)](https://zenodo.org/record/3778868)
+
 A snakemake pipeline to process the data for the two-pass alignment paper.
 
 Workflow without read simulation:
